@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visu.css">
+    <link rel="shortcut icon" href="inin.html" type="img/3e5a5c24-ceb8-492f-b528-e8582a9a3849.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>La biblia de java script</title>
+</head>
+<body>
+    <nav >
+        <img class="log" src="img/ce54bfb8-f818-4bde-bd73-c0db6157ebf0.png" alt="">
+        <a  class="a1" href="pre.html"><h1>Inicio</h1></a>
+        <a href="holsmun.html"><h1>Hola Mundo</h1></a>
+        <a href="funciones.html"><h1>Funciones</h1></a>
+        <a href="arreglos.html"><h1>Arreglos</h1></a>
+        <a href="vari.html"><h1>Variables</h1></a>
+        <input class="bar" type="text">
+        <img class="log1" src="img/Mapa de ewebits en Sin título-1.png" alt="">
+    </nav>
+   <main>
+    <div class="carrusel">
+     <img class="slide active" src="9a09530f-79b8-4935-913f-d5701e5653b6.png" alt="Imagen 1">
+     <img class="slide" src="ChatGPT Image 19 jun 2025, 04_36_32 p.m..png" alt="Imagen 2">
+     <img class="slide" src="ChatGPT Image 19 jun 2025, 04_43_07 p.m..png" alt="Imagen 3">
+     <button onclick="anterior()">⟨</button>
+     <button onclick="siguiente()">⟩</button>
+   </div>
+   <h1>📚 ¿Qué es un bucle?</h1>
+    <p>Un <strong>bucle</strong> (o <em>loop</em>) en JavaScript es una <strong>estructura de control</strong> que permite repetir un bloque de código varias veces hasta que se cumpla una condición específica.</p>
+    <p>Los bucles son muy útiles cuando necesitamos realizar <strong>operaciones repetitivas</strong> como recorrer arrays, sumar valores o esperar a que una condición cambie.</p>
+
+    <h2>📌 Tipos de bucles en JavaScript</h2>
+    <p>En JavaScript existen varios tipos de bucles, cada uno con diferentes usos:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Bucle</th>
+                <th>Característica Principal</th>
+                <th>Uso Común</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>for</td>
+                <td>Repite un bloque de código un número determinado de veces</td>
+                <td>Recorrer arrays o ejecutar acciones un número de veces</td>
+            </tr>
+            <tr>
+                <td>while</td>
+                <td>Repite mientras una condición sea verdadera</td>
+                <td>Cuando no sabemos cuántas veces se repetirá</td>
+            </tr>
+            <tr>
+                <td>do...while</td>
+                <td>Igual que el while, pero ejecuta el bloque al menos una vez</td>
+                <td>Cuando queremos que el código se ejecute al menos una vez</td>
+            </tr>
+            <tr>
+                <td>for...of</td>
+                <td>Recorre los valores de un objeto iterable como arrays</td>
+                <td>Recorrer arrays o strings</td>
+            </tr>
+            <tr>
+                <td>for...in</td>
+                <td>Recorre las propiedades enumerables de un objeto</td>
+                <td>Recorrer las claves (propiedades) de objetos</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>📌 Detalle de cada bucle</h2>
+
+    <h3>1. Bucle for</h3>
+    <ul>
+        <li>✅ Ejecuta el bloque un número exacto de veces.</li>
+        <li>✅ Tiene tres partes: inicialización, condición y actualización.</li>
+    </ul>
+    <pre><code>for (let i = 0; i &lt; 5; i++) {
+    console.log("Número: " + i);
+}</code></pre>
+
+    <h3>2. Bucle while</h3>
+    <ul>
+        <li>✅ Ejecuta el bloque mientras la condición sea verdadera.</li>
+        <li>✅ La condición se evalúa antes de cada iteración.</li>
+    </ul>
+    <pre><code>let i = 0;
+while (i &lt; 5) {
+    console.log("Número: " + i);
+    i++;
+}</code></pre>
+
+    <h3>3. Bucle do...while</h3>
+    <ul>
+        <li>✅ Igual que el while, pero la condición se evalúa después.</li>
+        <li>✅ El bloque se ejecuta al menos una vez, incluso si la condición es falsa desde el principio.</li>
+    </ul>
+    <pre><code>let i = 0;
+do {
+    console.log("Número: " + i);
+    i++;
+} while (i &lt; 5);</code></pre>
+
+    <h3>4. Bucle for...of</h3>
+    <ul>
+        <li>✅ Sirve para recorrer arrays, strings u objetos iterables.</li>
+        <li>✅ En cada iteración devuelve el valor del elemento.</li>
+    </ul>
+    <pre><code>let frutas = ["Manzana", "Banana", "Pera"];
+for (let fruta of frutas) {
+    console.log(fruta);
+}</code></pre>
+
+    <h3>5. Bucle for...in</h3>
+    <ul>
+        <li>✅ Recorre las propiedades (claves) de un objeto.</li>
+        <li>✅ Devuelve el nombre de cada propiedad.</li>
+    </ul>
+    <pre><code>let persona = { nombre: "Ana", edad: 30, ciudad: "Madrid" };
+for (let clave in persona) {
+    console.log(clave + ": " + persona[clave]);
+}</code></pre>
+
+    <h2>📌 Control de bucles: Sentencias break y continue</h2>
+
+    <h3>break 👉 Sale completamente del bucle.</h3>
+    <pre><code>for (let i = 0; i &lt; 10; i++) {
+    if (i === 5) break;
+    console.log(i);
+}</code></pre>
+
+    <h3>continue 👉 Salta la iteración actual y pasa a la siguiente.</h3>
+    <pre><code>for (let i = 0; i &lt; 5; i++) {
+    if (i === 2) continue;
+    console.log(i);
+}</code></pre>
+
+    <h2>📌 Buenas prácticas al usar bucles</h2>
+    <ul>
+        <li>✅ Evitar bucles infinitos (asegurarse que la condición termine en algún momento).</li>
+        <li>✅ No modificar innecesariamente la variable de control dentro del bucle.</li>
+        <li>✅ Usar <code>for...of</code> o métodos como <code>.forEach()</code> cuando sea posible para arrays.</li>
+        <li>✅ Si recorres objetos, usar <code>for...in</code> o métodos como <code>Object.keys()</code>.</li>
+    </ul>
+
+    <h2>📌 Ejemplo práctico: Sumar los números del 1 al 5</h2>
+    <pre><code>let suma = 0;
+for (let i = 1; i &lt;= 5; i++) {
+    suma += i;
+}
+console.log("La suma es: " + suma);
+</code></pre>
+
+    <h2>📌 Resumen Final</h2>
+    <ul>
+        <li>✅ Los bucles son esenciales para realizar tareas repetitivas.</li>
+        <li>✅ JavaScript ofrece distintas estructuras para distintas necesidades: <strong>for</strong>, <strong>while</strong>, <strong>do...while</strong>, <strong>for...of</strong>, <strong>for...in</strong>.</li>
+        <li>✅ Saber elegir el bucle correcto mejora la legibilidad y eficiencia del código.</li>
+    </ul>
+
+   </main>
+   <script>
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function mostrarSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+  }
+
+  function siguiente() {
+    index = (index + 1) % slides.length;
+    mostrarSlide(index);
+  }
+
+  function anterior() {
+    index = (index - 1 + slides.length) % slides.length;
+    mostrarSlide(index);
+  }
+</script>
+</body>
+</html>
