@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="img/3e5a5c24-ceb8-492f-b528-e8582a9a3849.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>La biblia de java script</title>
+</head>
+<body>
+    <nav >
+        <img class="log" src="img/ce54bfb8-f818-4bde-bd73-c0db6157ebf0.png" alt="">
+        <a  class="a1" href="holsmun.html"><h1>Hola mundo</h1></a>
+        <a href="funciones.html"><h1>Funciones</h1></a>
+        <a href="arreglos.html"><h1>Arreglos</h1></a>
+        <a href="vari.html"><h1>Variables</h1></a>
+        <a href="bucle.html"><h1>Bucle</h1></a>
+        <input class="bar" type="text">
+        <img class="log1" src="img/Mapa de ewebits en Sin título-1.png" alt="">
+    </nav>
+   <main>
+    <div class="carrusel">
+     <img class="slide active" src="img/9a09530f-79b8-4935-913f-d5701e5653b6.png" alt="Imagen 1">
+     <img class="slide" src="img/ChatGPT Image 19 jun 2025, 04_36_32 p.m..png" alt="Imagen 2">
+     <img class="slide" src="img/ChatGPT Image 19 jun 2025, 04_43_07 p.m..png" alt="Imagen 3">
+     <button onclick="anterior()">⟨</button>
+     <button onclick="siguiente()">⟩</button>
+   </div>
+
+   <h2>Historia de JavaScript </h2>
+
+   <h3>Origen (1995)</h3>
+
+   <p>JavaScript nació en un contexto donde Internet empezaba a crecer y los navegadores necesitaban una forma de hacer sus páginas más interactivas. En ese entonces, Netscape Navigator era uno de los navegadores más populares, y su equipo quería añadir un lenguaje de programación que fuera fácil de usar para desarrolladores y accesible para quienes no eran expertos.
+
+      Fue así como Brendan Eich, un programador de Netscape, creó en tan solo 10 días el primer prototipo del lenguaje. Lo llamó Mocha inicialmente, luego LiveScript, y finalmente se le puso el nombre de JavaScript.
+
+     Dato curioso: El nombre JavaScript fue una estrategia de marketing porque el lenguaje Java estaba de moda en ese momento, aunque Java y JavaScript son lenguajes completamente distintos.
+    </p>
+
+   <h3>Expansión y competencia (1996)</h3>
+
+   <p>
+    En 1996, Microsoft lanzó su propia versión de JavaScript, llamada JScript, para incluirlo en su navegador Internet Explorer. Como no existía un estándar oficial, cada navegador implementaba el lenguaje a su manera, lo que causaba muchos problemas de compatibilidad entre navegadores.
+   </p>
+
+   <h3>Estandarización como ECMAScript (1997)</h3>
+
+<p>
+Para evitar la fragmentación del lenguaje, en 1997 se creó un comité en la organización ECMA International, que tomó JavaScript como base y lo estandarizó bajo el nombre de ECMAScript (ES).
+
+Desde entonces, todas las versiones oficiales de JavaScript se publican como versiones de ECMAScript.
+</p>
+
+<div>ECMAScript 1 (1997): primera especificación oficial.</div>
+<div>ECMAScript 3 (1999): una versión ampliamente usada durante muchos años.</div>
+<div>ECMAScript 4: fue abandonada por ser demasiado ambiciosa.</div>
+
+<h3> Crisis y estancamiento (2000–2009)</h3>
+<p>Durante muchos años, el lenguaje se mantuvo casi sin cambios. Se usaba sobre todo para validar formularios, hacer menús simples y efectos básicos en páginas web.
+
+Sin embargo, con la llegada de AJAX (técnica para cargar datos sin recargar la página), JavaScript empezó a demostrar su verdadero potencial. Gracias a esto, comenzaron a surgir aplicaciones web más dinámicas y ricas en interacción, como Gmail y Google Maps.
+</p>
+
+<h3> Revolución moderna: ECMAScript 5 y Node.js (2009–2014)</h3>
+<p>En 2009, se lanza ECMAScript 5, que incluye mejoras importantes (como JSON nativo, strict mode, y más métodos para arrays), y ese mismo año también aparece Node.js, una plataforma para ejecutar JavaScript del lado del servidor.
+
+Esto cambió por completo la forma en que se veía el lenguaje: JavaScript ya no era solo para el navegador, sino que también podía usarse para crear servidores, herramientas de línea de comando, scripts y más.
+</p>
+
+<h3> Evolución acelerada: ECMAScript 6 (2015) y en adelante</h3>
+<p>En 2015, JavaScript recibe su mayor actualización hasta la fecha: ES6 (ECMAScript 2015).
+
+Esta versión agregó características modernas y poderosas, como:</p>
+
+<div>
+<li>let y const (para declarar variables)</li>
+<li>Funciones flecha (=>)</li>
+<li>Clases</li>
+<li>Módulos</li>
+<li>Promesas</li>
+<li>Template strings</li>
+<li>Destructuring</li>
+</div>
+
+<p>Desde entonces, ECMAScript se actualiza todos los años (ES2016, ES2017, etc.), y cada versión añade nuevas funciones, mejoras de rendimiento y más herramientas modernas.</p>
+
+<h3>JavaScript hoy</h3>
+
+<p>JavaScript es actualmente el lenguaje más popular del mundo según múltiples encuestas (como la de Stack Overflow). Se usa en:</p>
+    
+<div>
+<li>Frontend: con frameworks como React, Vue, Angular.</li>
+<li>Backend: con Node.js.</li>
+<li>Aplicaciones móviles: con React Native.</li>
+<li>
+Aplicaciones de escritorio: con Electron.</li>
+<li>Desarrollo de juegos, IoT, automatización, y mucho más.</li>
+</div>
+
+<p>Su versatilidad, la enorme comunidad y la cantidad de librerías y herramientas lo convirtieron en una pieza clave en el desarrollo moderno.</p>
+
+
+   </main>
+
+
+
+   <script>
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function mostrarSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+  }
+
+  function siguiente() {
+    index = (index + 1) % slides.length;
+    mostrarSlide(index);
+  }
+
+  function anterior() {
+    index = (index - 1 + slides.length) % slides.length;
+    mostrarSlide(index);
+  }
+</script>
+   <footer>Bruno C.E.N</footer>
+</body>
+</html>

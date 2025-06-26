@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="shortcut icon" href="img/3e5a5c24-ceb8-492f-b528-e8582a9a3849.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>La biblia de java script</title>
+</head>
+<body>
+    <nav >
+        <img class="log" src="img/ce54bfb8-f818-4bde-bd73-c0db6157ebf0.png" alt="">
+        <a  class="a1" href="pre.html"><h1>Inicio</h1></a>
+        <a href="holsmun.html"><h1>Hola Mundo</h1></a>
+        <a href="arreglos.html"><h1>Arreglos</h1></a>
+        <a href="vari.html"><h1>Variables</h1></a>
+        <a href="bucle.html"><h1>Bucle</h1></a>
+        <input class="bar" type="text">
+        <img class="log1" src="img/Mapa de ewebits en Sin título-1.png" alt="">
+    </nav>
+   <main>
+    <div class="carrusel">
+     <img class="slide active" src="img/carbon.png" alt="Imagen 1">
+     <img class="slide" src="img/images.jpeg" alt="Imagen 2">
+     <img class="slide" src="img/FwQDn-zWAAAVPpV.jpeg" alt="Imagen 3">
+     <button onclick="anterior()">⟨</button>
+     <button onclick="siguiente()">⟩</button>
+   </div>
+
+<h2>¿Qué es una función?</h2>
+<p>Una función en JavaScript es un bloque de código reutilizable que realiza una tarea específica o devuelve un resultado. Permite agrupar instrucciones y ejecutarlas cuando las necesitemos.</p>
+
+<p>Son una de las estructuras más importantes del lenguaje, ya que ayudan a mantener el código organizado, limpio y eficiente.</p>
+
+<h3>Partes de una función en JavaScript:</h3>
+<p>Una función típica en JavaScript tiene las siguientes partes:</p>
+<div>
+<li>1. Palabra clave function</li>
+<p>Indica que estás creando una función.</p>
+
+<li>2. Nombre de la función</li>
+<p>Sirve para identificarla y llamarla después.</p>
+
+<li>3. Parámetros (opcional)</li>
+<p>Son los valores que la función recibe al ser llamada. Se colocan entre paréntesis ().</p>
+
+<li>4. Cuerpo de la función</li>
+<p>Va entre llaves {} y contiene las instrucciones que ejecutará.</p>
+</div>
+
+<h2>Ejemplo básico de una función:</h2>
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>function saludar() {</p>
+<p>  console.log("¡Hola, mundo!");</p>
+<p>}</p>
+
+<p>saludar(); // Esto ejecuta la función y muestra el mensaje</p>
+<h2>Explicación:</h2>
+
+<p>Se define una función llamada saludar.</p>
+
+<p>Dentro tiene una instrucción que muestra texto en la consola.</p>
+
+<p>La línea saludar(); es donde llamamos a la función para que se ejecute.</p>
+
+<h2>Funciones con parámetros:</h2>
+<p>Las funciones pueden recibir datos externos (parámetros) para trabajar con ellos.</p>
+
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>function sumar(a, b) {</p>
+  <p>console.log(a + b);</p>
+<p>}</p>
+
+<p>sumar(3, 5); // Resultado: 8</p>
+<h2>Explicación:</h2>
+
+<p>La función sumar recibe dos parámetros: a y b.</p>
+
+<p>Al llamarla, le pasamos los valores 3 y 5.</p>
+
+<p>La función hace la suma y muestra el resultado.</p>
+
+<h2>Funciones que devuelven valores (return):</h2>
+<p>A veces queremos que la función nos devuelva un resultado para usarlo después.<p>
+
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>function multiplicar(x, y) {</p>
+ <p> return x * y;</p>
+<p>}</p>
+
+<p>let resultado = multiplicar(4, 6);</p>
+<p>console.log(resultado); // Resultado: 24</p>
+<h2>Explicación:</h2>
+
+<p>La función multiplicar devuelve el resultado de multiplicar x por y.</p>
+
+<p>Luego guardamos ese valor en la variable resultado.</p>
+
+<p>Finalmente mostramos el resultado.</p>
+
+<h2>Tipos de funciones en JavaScript:</h2>
+JavaScript tiene varias formas de crear funciones:
+
+<h3>1. Declaración de función (Function Declaration):</h3>
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>function saludar() {</p>
+  <p>console.log("Hola");</p>
+<p>}</p>
+<p>✅ Se pueden llamar antes de ser declaradas.</p>
+
+<h3>2. Expresión de función (Function Expression):</h3>
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>const despedir = function() {</p>
+  <p>console.log("Adiós");</p>
+<p>};</p>
+<p>✅ Se deben definir antes de poder usarlas.</p>
+
+<h3>3. Funciones flecha (Arrow Functions):</h3>
+<p>Introducidas en ES6, son más compactas.</p>
+
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>const restar = (a, b) => {</p>
+ <p> return a - b;</p>
+<p>};</p>
+<h3>O más corta aún si tiene solo una línea:</h3>
+
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>const cuadrado = x => x * x;</p>
+<p>✅ Son ideales para funciones cortas y anónimas.</p>
+
+<h2>Parámetros por defecto:</h2>
+<h3>Puedes dar un valor por defecto a los parámetros por si el usuario no pasa uno:</h3>
+
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>function saludar(nombre = "Amigo") {</p>
+  <p>console.log("Hola " + nombre);</p>
+<p>}</p>
+
+<p>saludar();        // Hola Amigo</p>
+<p>saludar("Bruno"); // Hola Bruno</p>
+<h2>Funciones anidadas:</h2>
+<h3>Puedes tener funciones dentro de otras:</h3>
+
+<p>javascript</p>
+<p>Copiar</p>
+<p>Editar</p>
+<p>function operacion() {</p>
+  <p>function mostrarMensaje() {</p></p>
+    <p>console.log("Ejecutando operación...");</p>
+  <p>}</p>
+  <p>mostrarMensaje();</p>
+<p>}</p>
+
+<p>operacion();</p>
+<h2>Importancia de las funciones:</h2>
+<p>Reutilización de código: Escribes una vez y usas varias veces.</p>
+
+<p>Legibilidad: El código se entiende mejor.</p>
+
+<p>Mantenimiento: Es más fácil modificar un bloque de código dentro de una función que en varios lugares distintos.</p>
+
+<h2>Resumen final:</h2>
+<p>Las funciones en JavaScript son bloques de código reutilizable que pueden recibir datos (parámetros), realizar acciones y devolver resultados. Puedes definirlas de diferentes formas y son esenciales para crear programas ordenados y fáciles de mantener.</p>
+   </main>
+
+   <script>
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function mostrarSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+  }
+
+  function siguiente() {
+    index = (index + 1) % slides.length;
+    mostrarSlide(index);
+  }
+
+  function anterior() {
+    index = (index - 1 + slides.length) % slides.length;
+    mostrarSlide(index);
+  }
+</script>
+
+   <footer>Bruno C.E.N</footer>
+</body>
+</html>

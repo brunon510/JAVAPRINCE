@@ -1,0 +1,110 @@
+body{
+    animation: cambiarColor 15s ease-in-out infinite;
+
+    margin: 0 auto;
+}
+    @keyframes cambiarColor {
+  0%   { background-color: #360157; }
+  20%  { background-color: #44117e; }
+  40%  { background-color: #5e23aa; }
+  60%  { background-color: #742bcd; }
+  80%  { background-color: #944ef7; }
+  100% { background-color: #360157; }
+    }
+nav{
+    display: flex;
+    align-items: center;
+    background-color: rgb(42, 9, 73);
+    text-decoration: none;
+}
+a{
+    margin: 0 20px;
+    text-decoration: none;
+    color: rgb(238, 212, 17);
+    
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+a:hover{
+    background-color: rgb(104, 3, 141);
+    border: 1px solid rgb(152, 136, 153);
+    color: rgb(248, 248, 248);
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+.a1{
+    margin-left: 120px;
+}
+.log{
+   height: 120px;
+    width: 120px;
+    border-radius: 30%;
+}
+.log1{
+   height: 40px;
+    width: 40px;
+}
+.bar{
+    height: 40px;
+    width: 300px;
+    border-radius: 40px;
+    margin-left: 40px;
+}
+main{  
+    height: 110%;
+    font-size: 30px;
+    background-color: rgb(249, 226, 21);
+    text-align: center;
+    width: 80%;         /* o cualquier ancho fijo */
+    margin: 50px auto;
+    border-radius: 15px;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+main img{
+   height: 200px;
+    width: 200px;
+}
+
+.carrusel {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+ main div{
+ width: 80%;
+  margin: 0 auto;
+ }
+button:nth-of-type(1) { left: 10px; }
+button:nth-of-type(2) { right: 10px; }
+footer{color: aliceblue;}

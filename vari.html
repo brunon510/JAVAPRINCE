@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="shortcut icon" href="img/3e5a5c24-ceb8-492f-b528-e8582a9a3849.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>La biblia de java script</title>
+</head>
+<body>
+    <nav >
+        <img class="log" src="img/ce54bfb8-f818-4bde-bd73-c0db6157ebf0.png" alt="">
+        <a  class="a1" href="pre.html"><h1>Inicio</h1></a>
+        <a href="holsmun.html"><h1>Hola Mundo</h1></a>
+        <a href="funciones.html"><h1>Funciones</h1></a>
+        <a href="arreglos.html"><h1>Arreglos</h1></a>
+        <a href="bucle.html"><h1>Bucle</h1></a>
+        <input class="bar" type="text">
+        <img class="log1" src="img/Mapa de ewebits en Sin título-1.png" alt="">
+    </nav>
+   <main>
+    <div class="carrusel">
+     <img class="slide active" src="img/imafrfgjggges.png" alt="Imagen 1">
+     <img class="slide" src="img/1698299548598.jpeg" alt="Imagen 2">
+     <img class="slide" src="img/n15b3ztjtyp61.png" alt="Imagen 3">
+     <button onclick="anterior()">⟨</button>
+     <button onclick="siguiente()">⟩</button>
+   </div>
+<h1>📚 ¿Qué es una variable en JavaScript?</h1>
+    <p>Una <strong>variable</strong> en JavaScript es un <strong>espacio en memoria reservado para almacenar un dato o valor</strong> que puede cambiar durante la ejecución del programa.</p>
+    <p>Se utilizan para guardar <strong>información como números, cadenas de texto, objetos, listas</strong>, entre otros.</p>
+
+    <h2>📌 Formas de declarar variables en JavaScript</h2>
+    <p>Desde <strong>ES6</strong>, JavaScript ofrece <strong>tres formas principales</strong> de declarar variables:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Forma de declaración</th>
+                <th>Alcance</th>
+                <th>Características</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>var</td>
+                <td>Función</td>
+                <td>Antiguo, poco recomendado. Puede redeclararse y reasignarse.</td>
+            </tr>
+            <tr>
+                <td>let</td>
+                <td>Bloque</td>
+                <td>Recomendado para variables que cambian. Solo puede declararse una vez en el mismo bloque.</td>
+            </tr>
+            <tr>
+                <td>const</td>
+                <td>Bloque</td>
+                <td>Recomendado para valores que no van a cambiar (constantes).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Ejemplos:</h3>
+    <pre><code>var nombre = "Juan";       // Declaración con var
+let edad = 25;             // Declaración con let
+const PI = 3.1416;         // Declaración con const
+</code></pre>
+
+    <h2>📌 Tipos de datos que pueden almacenar las variables</h2>
+    <p>JavaScript es un lenguaje de <strong>tipado dinámico</strong>, por lo que una variable puede contener cualquier tipo de dato y puede cambiar de tipo durante la ejecución.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Dato</th>
+                <th>Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Number (Número)</td>
+                <td><code>let numero = 10;</code></td>
+            </tr>
+            <tr>
+                <td>String (Cadena de texto)</td>
+                <td><code>let texto = "Hola mundo";</code></td>
+            </tr>
+            <tr>
+                <td>Boolean (Booleano)</td>
+                <td><code>let esMayor = true;</code></td>
+            </tr>
+            <tr>
+                <td>Undefined</td>
+                <td><code>let x;</code> (valor por defecto si no se inicializa)</td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td><code>let y = null;</code></td>
+            </tr>
+            <tr>
+                <td>Object (Objeto)</td>
+                <td><code>let persona = {nombre: "Ana", edad: 30};</code></td>
+            </tr>
+            <tr>
+                <td>Array (Arreglo)</td>
+                <td><code>let numeros = [1, 2, 3];</code></td>
+            </tr>
+            <tr>
+                <td>Function (Función)</td>
+                <td><code>let saludo = function() { console.log("Hola"); };</code></td>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td><code>let id = Symbol("id");</code></td>
+            </tr>
+            <tr>
+                <td>BigInt</td>
+                <td><code>let numeroGrande = 12345678901234567890n;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>📌 Ámbito o Scope de las variables</h2>
+    <p>El <strong>scope</strong> (alcance) determina desde dónde puedes acceder a una variable.</p>
+    <ul>
+        <li><strong>Global Scope:</strong> Se puede acceder desde cualquier parte del código.</li>
+        <li><strong>Function Scope:</strong> Accesible solo dentro de la función donde fue declarada (usando <code>var</code>).</li>
+        <li><strong>Block Scope:</strong> Accesible solo dentro del bloque <code>{}</code> donde fue declarada (usando <code>let</code> o <code>const</code>).</li>
+    </ul>
+
+    <h3>Ejemplo de scope:</h3>
+    <pre><code>function ejemplo() {
+    let x = 10;
+    console.log(x); // Funciona
+}
+console.log(x); // Error: x no está definida
+</code></pre>
+
+    <h2>📌 Hoisting (Elevación)</h2>
+    <p>JavaScript primero eleva las <strong>declaraciones de variables</strong> (solo las declaraciones, no las asignaciones):</p>
+    <ul>
+        <li>Las variables declaradas con <code>var</code> son elevadas pero inicializadas como <code>undefined</code>.</li>
+        <li>Las variables con <code>let</code> y <code>const</code> también son elevadas pero <strong>no pueden usarse antes de ser declaradas</strong> (provocan error si lo intentas).</li>
+    </ul>
+
+    <h2>📌 Reglas y buenas prácticas al nombrar variables</h2>
+    <h3>✔️ Reglas válidas:</h3>
+    <ul>
+        <li>Solo pueden contener letras, números, <code>$</code> y <code>_</code>.</li>
+        <li>No pueden empezar con un número.</li>
+        <li>No usar palabras reservadas del lenguaje.</li>
+    </ul>
+
+    <h3>✔️ Buenas prácticas:</h3>
+    <ul>
+        <li>Usar nombres descriptivos: <code>let edadUsuario</code> en vez de <code>let x</code>.</li>
+        <li>Seguir la convención <strong>camelCase</strong>: Ejemplo: <code>numeroDeClientes</code>.</li>
+        <li>Mantener consistencia: No mezclar idiomas o estilos.</li>
+    </ul>
+
+    <h2>📌 Ejemplo completo:</h2>
+    <pre><code>const nombre = "Lucas";
+let edad = 28;
+var ciudad = "Buenos Aires";
+
+if (edad > 18) {
+    let mensaje = "Es mayor de edad";
+    console.log(mensaje);
+}
+</code></pre>
+
+    <h2>📌 Resumen Final</h2>
+    <ul>
+        <li>✅ JavaScript permite una gran flexibilidad con las variables gracias a su <strong>tipado dinámico</strong>.</li>
+        <li>✅ Se recomienda usar <strong>let</strong> y <strong>const</strong> en lugar de <strong>var</strong> para evitar problemas de scope.</li>
+        <li>✅ Elegir nombres descriptivos y consistentes mejora la legibilidad del código.</li>
+    </ul>
+
+   </main>
+   <script>
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function mostrarSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+  }
+
+  function siguiente() {
+    index = (index + 1) % slides.length;
+    mostrarSlide(index);
+  }
+
+  function anterior() {
+    index = (index - 1 + slides.length) % slides.length;
+    mostrarSlide(index);
+  }
+</script>
+   <footer>Bruno C.E.N</footer>
+</body>
+</html>
